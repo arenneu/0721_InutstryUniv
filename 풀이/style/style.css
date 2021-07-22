@@ -1,144 +1,195 @@
 @charset "UTF-8";
 
 * {
-    color: #333;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
-a:link { color: #444; }
-a:visited { color: #444; }
-a:hover { color: #666; }
-a:active { color: #444; }
+a:link {
+  color: #444;
+}
+a:visited {
+  color: #444;
+}
+a:hover {
+  color: #666;
+}
+a:active {
+  color: #444;
+}
 
 .flexContainer {
-    display: flex;
+  display: flex;
 }
 
-header, nav, main, section, article, aside, footer{
-    display: block;
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  display: block;
 }
 /* IE 낮은 버전에서 동일한 결과 출력용 */
 
-
 /* GuideLine 시작 */
-div#headerFrame,
-header#header{
-    border: 1px solid #000;
-}
+/* div#headerFrame,
+header#header {
+  border: 1px solid #000;
+} */
 
 div#wrap {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
-div#slide{
-    border: 1px solid #000;
+div#slide {
+  border: 1px solid #000;
 }
 
-div#contents{
-    border: 1px solid #000;
+div#contents {
+  border: 1px solid #000;
 }
 
 div#footerFrame,
-footer#footer{
-    border: 1px solid #000;
+footer#footer {
+  border: 1px solid #000;
 }
 
 /* GuideLine 끝 */
 /* div#headerFrame 시작 */
 
-div#headerFrame{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(79, 155, 185);
+div#headerFrame {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(106, 116, 145);
 }
 
-header#header{
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto;
+header#header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
 }
 
-#header #headerLogo{
-    width: 250px;
-    height: 100px;
-    line-height: 100px;
+#header #headerLogo {
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
 
-    border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
-#header nav#gnb{
-    flex: 1;
-    margin: 0 40px;
-    border: 1px solid #000;
+#header nav#gnb {
+  flex: 1;
+  margin: 0 40px;
+  /* border: 1px solid #000; */
 }
 
-#header #gnb ul#mainMenu{
-    height: 100px;
-    border: 1px solid #0ff;
+#header #gnb ul#mainMenu {
+  height: 100px;
+  /* border: 1px solid #0ff; */
 
-    justify-content: flex-end;
-    align-items: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-#header .subMenu{
-    position: absolute;
+#header .subMenu {
+  position: absolute;
+  display: none;
+  z-index: 2;
 }
 
-#header #gnb a{
-    width: 150px;
-    height: 42px;
-    line-height: 42px;
-    text-align: center;
-    display: block;
-
-    border: 1px solid #aaa;
+#header .subLi a {
+  color: rgb(106, 116, 145);
+  border-color: rgb(213, 216, 233) !important;
 }
 
+#header #gnb a {
+  width: 150px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 17px;
+  text-align: center;
+  display: block;
+  color: #fff;
+
+  /* border: 1px solid #aaa; */
+}
+
+#gnb .mainLi:hover > a {
+  background-color: rgb(213, 216, 233);
+  color: rgb(106, 116, 145);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#gnb .subLi > a:hover {
+  background-color: #fff;
+  color: #aaa;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 /* div#headerFrame 끝 */
+/* gnb 메뉴의 서브메뉴 배경 시작 */
+
+div#subMenuBG {
+  width: 1200px;
+  height: 170px;
+  background-color: rgb(213, 216, 233);
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  display: none;
+}
+
+/* gnb 메뉴의 서브메뉴 배경 끝 */
 /* div#wrap 시작 */
 
-div#wrap{
-    width: 1200px;
-    margin: 0 auto;
+div#wrap {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-div#slide{
-    height: 300px;
+div#slide {
+  height: 300px;
 }
 
-div#contents{
-    height: 200px;
+div#contents {
+  height: 200px;
 }
 
 /* div#wrap 끝 */
 /* div#footerFrame 시작 */
 
-div#footerFrame{
-    width: 100%;
-    height: 100px;
-    background-color: rgb(79, 155, 185);
+div#footerFrame {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(106, 116, 145);
 }
 
-footer#footer{
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto;
+footer#footer {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 /* div#footerFrame 끝 */
