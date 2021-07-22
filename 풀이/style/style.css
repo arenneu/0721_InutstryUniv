@@ -115,7 +115,7 @@ header#header {
 }
 
 #header .subLi a {
-  color: rgb(106, 116, 145);
+  color: rgb(106, 116, 145) !important;
   border-color: rgb(213, 216, 233) !important;
 }
 
@@ -171,6 +171,34 @@ div#wrap {
 
 div#slide {
   height: 300px;
+  overflow: hidden;
+}
+
+div#shuttleFrame {
+  width: 3660px;
+  height: 300px;
+}
+
+div#shuttleFrame a {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  display: block;
+}
+
+div#shuttleFrame span {
+  background-color: rgba(255, 255, 255, 0.829);
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(106, 116, 145);
+  padding: 12px 55px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 div#contents {
