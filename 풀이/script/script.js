@@ -10,7 +10,7 @@ $(function () {
         $("div#subMenuBG").stop().slideUp(50);
     });
     // gnb 메뉴 끝
-    // 슬라이드쇼
+    // 슬라이드쇼 시작
 
     setInterval(fnslide, 3000);
     function fnslide(){
@@ -23,7 +23,15 @@ $(function () {
             }
         );
     }
+    
+    // 슬라이드쇼 끝
+    // 모달레이어팝업 시작
+    $("#popPoint").click(function(){
+        $("#layerBG").css({"display":"block"});
+    });
 
-
-
+    $("#closeBtnArea button ").click(function(){
+        $("#layerBG").css({"display":"none"});
+    });
+    // 모달레이어팝업 끝
 });
